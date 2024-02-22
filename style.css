@@ -3,20 +3,22 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background-image: url('background.jpg'); /* Sets the background image */
+    background-size: cover; /* Ensures the background covers the whole page */
+    background-attachment: fixed; /* Makes the background fixed during scroll */
     color: #333;
 }
 
 header {
-    background: #333;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
 }
 
 nav ul {
     list-style: none;
-    background: #555;
+    background: rgba(85, 85, 85, 0.8); /* Semi-transparent background */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -39,11 +41,23 @@ nav ul li a:hover {
 section {
     padding: 1rem 0;
     text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    margin: 1rem; /* Adds some space around sections */
+    border-radius: 8px; /* Softens the edges of the sections */
+}
+
+.headshot { /* Class for the headshot image */
+    display: block;
+    max-width: 150px; /* Limits the size of the image */
+    margin: 20px auto; /* Centers the image and adds space around */
+    border-radius: 50%; /* Makes the image round */
+    border: 3px solid #333; /* Adds a border around the image */
 }
 
 footer {
-    background: #333;
+    background: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
     color: white;
     text-align: center;
     padding: 1rem 0;
 }
+
