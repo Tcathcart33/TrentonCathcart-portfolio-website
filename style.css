@@ -122,20 +122,26 @@
             transform: translateY(0);
         }
 
-        .certifications ul li a {
+        .project-item a {
             display: inline-block;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             font-size: 1rem;
             font-weight: bold;
             color: #fff;
-            background-color: #007BFF;
+            background-color: #28a745;
+            text-align: center;
             border-radius: 5px;
             text-decoration: none;
+            margin-top: 1rem;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .certifications ul li a:hover {
-            background-color: #0056b3;
+        .project-item a:hover {
+            background-color: #218838;
             transform: translateY(-2px);
+        }
+
+        .project-item a:active {
+            transform: translateY(0);
         }
 </style>
