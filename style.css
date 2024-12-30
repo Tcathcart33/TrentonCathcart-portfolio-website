@@ -128,7 +128,7 @@
             font-size: 1rem;
             font-weight: bold;
             color: #fff;
-            background-color: #28a745;
+            background-color: #6C757D;
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
@@ -137,7 +137,7 @@
         }
 
         .project-item a:hover {
-            background-color: #6C757D;
+            background-color: #5A6268;
             transform: translateY(-2px);
         }
 
