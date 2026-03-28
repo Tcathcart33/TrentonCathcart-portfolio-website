@@ -242,12 +242,17 @@ ul li::marker {
 }
 
 .experience-item ul {
-    margin-top: 0.75rem;
-    padding-left: 1.35rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
 }
 
 .experience-item li {
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.65rem;
+    padding-left: 0.8rem;
+    border-left: 3px solid #2563eb;
+    line-height: 1.55;
+    font-size: 0.95rem;
 }
 
 /* Supports the newer experience-card HTML too, without breaking older HTML */
