@@ -225,6 +225,31 @@ ul li::marker {
     border-radius: 14px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 }
+/* Make ECC experience clickable */
+.experience-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Hover effect like project cards */
+.experience-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+    border-color: #2563eb;
+}
+
+/* Optional: add arrow indicator */
+.experience-link::after {
+    content: "View Designs ↗";
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 0.9rem;
+}
 
 .experience-item:last-child {
     margin-bottom: 0;
