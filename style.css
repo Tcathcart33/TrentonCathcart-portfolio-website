@@ -397,6 +397,35 @@ ul li::marker {
     display: none;
 }
 
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.cert-card span:first-of-type {
+    flex: 1;
+}
+
+/* ICON */
+.cert-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 4px;
+    border: 1px solid #e5e7eb;
+}
+
+/* RIGHT SIDE TEXT */
+.cert-arrow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
 /* ===== Buttons ===== */
 button {
     display: inline-block;
