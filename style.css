@@ -456,6 +456,32 @@ button:active {
     transform: translateY(0);
 }
 
+.file-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.file-card:hover {
+    background: #ffffff;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.file-arrow {
+    color: #2563eb;
+    font-weight: bold;
+}
+
 /* ===== Footer ===== */
 footer {
     background: #111827;
