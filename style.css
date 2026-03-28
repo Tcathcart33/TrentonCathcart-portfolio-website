@@ -255,7 +255,7 @@ ul li::marker {
     font-size: 0.95rem;
 }
 
-/* Supports the newer experience-card HTML too, without breaking older HTML */
+/* Supports alternate experience markup too */
 .experience-section {
     width: min(100% - 2rem, 1000px);
 }
@@ -324,25 +324,6 @@ ul li::marker {
 #certifications .certs {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
-    text-align: left;
-}
-
-#certifications h3 {
-    margin: 0;
-    padding: 1rem 1.1rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1f2937;
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-}
-
-#certifications .certs {
-    display: flex;
-    flex-direction: column;
     gap: 0.95rem;
 }
 
@@ -350,6 +331,7 @@ ul li::marker {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
     padding: 1rem 1.2rem;
     font-size: 1rem;
     font-weight: 700;
@@ -375,10 +357,27 @@ ul li::marker {
     outline-offset: 3px;
 }
 
+.cert-card span:first-of-type {
+    flex: 1;
+}
+
+.cert-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #ffffff;
+    padding: 4px;
+    border: 1px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
 .cert-arrow {
-    font-size: 1.05rem;
-    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2563eb;
     margin-left: 1rem;
+    flex-shrink: 0;
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -396,39 +395,6 @@ ul li::marker {
     background: #f8fafc;
     border-color: #dbe3ec;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-}
-
-.cert-card-static .cert-arrow {
-    display: none;
-}
-
-.cert-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    justify-content: space-between;
-}
-
-.cert-card span:first-of-type {
-    flex: 1;
-}
-
-/* ICON */
-.cert-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 6px;
-    background: #ffffff;
-    padding: 4px;
-    border: 1px solid #e5e7eb;
-}
-
-/* RIGHT SIDE TEXT */
-.cert-arrow {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #2563eb;
 }
 
 /* ===== Buttons ===== */
@@ -456,7 +422,7 @@ button:active {
     transform: translateY(0);
 }
 
-/* ===== Subpage Project File Layout Fix ===== */
+/* ===== Subpage Project Files ===== */
 .project-files {
     max-width: 760px;
     margin: 2rem auto;
@@ -535,17 +501,6 @@ button:active {
     opacity: 0.97;
 }
 
-/* Desktop safeguard */
-@media (min-width: 769px) {
-    .project-files {
-        max-width: 760px;
-    }
-
-    .file-card {
-        display: flex !important;
-    }
-}
-
 /* ===== Footer ===== */
 footer {
     background: #111827;
@@ -571,13 +526,18 @@ footer {
     }
 
     nav ul {
-        gap: 0.25rem;
-        padding: 0.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem;
+        padding: 0.5rem 0.6rem;
     }
 
     nav ul li a {
-        font-size: 0.82rem;
-        padding: 0.6rem 0.8rem;
+        font-size: 0.78rem;
+        padding: 0.45rem 0.7rem;
+        border-radius: 999px;
+        text-align: center;
     }
 
     section {
@@ -607,21 +567,34 @@ footer {
     .project-item h3 {
         font-size: 1.15rem;
     }
+
+    .cert-card,
+    .file-card {
+        padding: 0.95rem 1rem;
+    }
 }
 
 @media (max-width: 480px) {
+    header h1 {
+        font-size: 1.55rem;
+    }
+
+    header h4 {
+        font-size: 0.9rem;
+    }
+
     nav ul {
-        flex-direction: column;
-        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem;
+        padding: 0.45rem 0.5rem;
     }
 
     nav ul li a {
-        display: block;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.55rem;
+        font-size: 0.72rem;
+        padding: 0.4rem 0.6rem;
+        letter-spacing: 0.02em;
     }
 
     section h2 {
@@ -632,5 +605,20 @@ footer {
     section ul li,
     .experience-meta {
         font-size: 0.96rem;
+    }
+
+    .cert-card,
+    .file-card {
+        padding: 0.9rem;
+    }
+
+    .cert-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .file-arrow,
+    .cert-arrow {
+        margin-left: 0.6rem;
     }
 }
